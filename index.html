@@ -4,15 +4,32 @@
         <title>Odin Recipe Homepage</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="recipe.css">
-    </head>
-    <body>
-        <h1 class="Fancy">Thor's Kitchen</h1>
-          <img src="./images/ChrisHem.gif" alt="Thor cooking">
-        <h2 class="Fancy">What's on the Menu?</h2>
-          <ul>
-              <li><button><a href="./recipes/ratatouille.html">Ratatouille</a></button></li>
-              <li><button><a href="./recipes/cacio-e-pepe.html">Cacio e Pepe</a></button></li>
-              <li><button><a href="./recipes/katsudon.html">Katsudon</a></button></li>
-          </ul>
+      </head>
+      <body>
+        <h1>Thor's Kitchen</h1>
+        <img src="./images/ChrisHem.gif" alt="Thor cooking">
+        <h2>What's on the Menu?</h2>
+          <div id="first">
+              <div id="second">
+                <p><a href="./recipes/ratatouille.html">Ratatouille</a><br />
+                    <a href="./recipes/ratatouille.html">Learn more!</a>
+                </p></div>
+              <div id="third">
+                <p><a href="./recipes/cacio-e-pepe.html">Cacio e Pepe</a><br />
+                    <a href="./recipes/cacio-e-pepe.html">Learn More!</a>
+                </p></div>
+              <div id="fourth">
+                <p><a href="./recipes/katsudon.html">Katsudon</a><br />
+                    <a href="./recipes/katsudon.html">Learn More!</a>
+                </p></div>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+          <script>
+            const div = document.querySelector('#first');
+
+            $('div').on('click', () => {
+                $('p').toggleClass('showDescription');
+            })
+          </script>
     </body>
 </html>
